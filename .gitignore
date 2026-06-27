@@ -1,0 +1,13 @@
+.env
+.DS_Store
+.claude/
+__pycache__/
+*.pyc
+*.egg-info/
+.venv/
+dist/
+corpus/raw/*
+!corpus/raw/.gitkeep
+corpus/chunks/*
+!corpus/chunks/.gitkeep
+qdrant_storage/
