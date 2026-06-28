@@ -27,7 +27,7 @@ MAX_ATTEMPTS = 3
 def node_retrieve(state: SelfRAGState) -> dict:
     query = state["query"]
     attempts = state.get("attempts", 0)
-    console.print(f"\n[bold cyan][RETRIEVE][/bold cyan] Attempt {attempts + 1}/{MAX_ATTEMPTS} — query: \"{query[:80]}\"")
+    console.print(f"\n[bold cyan][RETRIEVE][/bold cyan] Attempt {attempts + 1}/{MAX_ATTEMPTS} — query: \"{query}\"")
 
     docs = retrieve(query, settings.collection_contextual, top_k=5)
     console.print(f"[dim]  → Retrieved {len(docs)} chunks from '{settings.collection_contextual}'[/dim]")
